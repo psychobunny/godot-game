@@ -26,3 +26,6 @@ func _on_StartButton_pressed():
 
 func _on_MessageTimer_timeout():
 	$MessageLabel.hide()
+
+func _on_restart_game(): # since Mob is being instanced manually, see Main.gd
+    queue_free() # deletes current node at end of current frame
